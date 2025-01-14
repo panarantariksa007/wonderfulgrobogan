@@ -1,0 +1,146 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Open Sans", sans-serif;
+}
+
+body{
+    color: #fff;
+    background-color: #fff;
+}
+
+
+section{
+    padding: 70px 10% 60px;
+}
+
+.home{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to bottom,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url(../assets/img/cave.jpg);
+    background-size: cover;
+    background-position: bottom center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.home-text h5{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    color: #fff;
+}
+
+.home-text h1{
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color:#f1683a;
+}
+
+.home-text p{
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 30px;
+    color: #ffffffd3;
+    margin-bottom: 35px;
+
+}
+
+.btn{
+    display: inline-block;
+    padding: 13px 30px;
+    background-color: #ffffff6c;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.btn:hover{
+    transform: translateX(5px);
+    border: 2px solid;
+    background: transparent;
+    color: #f1683a;
+}
+
+/* PETA BUDAYA N RELIGI  JUDUL */
+
+.petabudayanreligi {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-left: 5rem;
+    gap: 1rem;
+    width: 80rem;
+    color: #0B2447;
+}
+.petabudayanreligi-judul h1{
+    font-size: 22px;
+    font-weight: 600;
+    color: #0B2447;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    margin-left: 18rem;
+    text-align: center;
+
+}
+
+.petabudayanreligi-judul h5{
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-left: 18rem;
+    text-align: center;
+    color: #f1683a;
+}
+
+.petabudayanreligi-judul p{
+    font-size: var(--p-font-);
+    font-weight: 400;
+    line-height: 30px;
+    color: #0B2447;
+    margin-left: 18rem;
+    text-align: center;
+}
+/* END PETA BUDAYA N RELIGI JUDUL */
+
+/* CONTENT PETA BUDAYA N RELIGI */
+
+.peta {
+    align-items: center;
+    text-align: center;
+}
+.btn-peta{
+    display: inline-block;
+    padding: 13px 30px;
+    background-color: #0B2447;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 5px;
+    /* margin-top: 2rem; */
+    align-items: center;
+
+}
+.btn-peta:hover{
+transform: translateX(5px);
+border: 2px solid;
+background: transparent;
+color: #0B2447;
+}
+/* END CONTENT PETA BUDAYA N RELIGI  */
+

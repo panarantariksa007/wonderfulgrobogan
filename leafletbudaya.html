@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peta Wisata</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+  </head>
+  <body>
+    <div id="map" style="width: 1500px; height: 750px"></div>
+
+    <script>
+      const map = L.map("map").setView([-7.080882, 110.917314], 11);
+      L.Routing.control({
+        waypoints: [L.latLng(-7.080882, 110.917314), L.latLng(-7.0225726, 110.69991974)],
+      }).addTo(map);
+
+      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      }).addTo(map);
+
+      const LeafIcon = L.Icon.extend({
+        options: {
+          // shadowUrl: 'leaf-shadow.png',
+          iconSize: [50, 50],
+          shadowSize: [50, 64],
+          iconAnchor: [22, 94],
+          shadowAnchor: [4, 62],
+          popupAnchor: [-3, -76],
+        },
+      });
+
+      const greenIcon = new LeafIcon({ iconUrl: "./assets/icon/wayang.png" });
+      const redIcon = new LeafIcon({ iconUrl: "./assets/icon/sedekah.png" });
+      const orangeIcon = new LeafIcon({ iconUrl: "./assets/icon/sedekah.png" });
+      const yellowIcon = new LeafIcon({ iconUrl: "./assets/icon/sedekah.png" });
+      const blueIcon = new LeafIcon({ iconUrl: "./assets/icon/sedekah.png" });
+      const pinkIcon = new LeafIcon({ iconUrl: "./assets/icon/sedekah.png" });
+      const sageIcon = new LeafIcon({ iconUrl: "./assets/icon/Cave.png" });
+      const blackIcon = new LeafIcon({ iconUrl: "./assets/icon/Waterfall.png" });
+      const purpleIcon = new LeafIcon({ iconUrl: "./assets/icon/parade.png" });
+      const skyIcon = new LeafIcon({ iconUrl: "./assets/icon/becak.png" });
+
+      const mGreen = L.marker([-7.08218572, 110.9173701], { icon: greenIcon }).bindPopup("PENTAS WAYANG KULIT").addTo(map);
+      const mRed = L.marker([-7.062889475, 111.0153186], { icon: redIcon }).bindPopup("HAUL KI AGENG TARUB").addTo(map);
+      const mOrange = L.marker([-7.097545355, 111.0004282], { icon: orangeIcon }).bindPopup("HAUL KI AGENG SELO").addTo(map);
+      const mYellow = L.marker([-7.080839813, 110.9173216], { icon: yellowIcon }).bindPopup("BOYONG GROBOG").addTo(map);
+      const mBlue = L.marker([-7.074869485, 110.8983133], { icon: greenIcon }).bindPopup("HAUL KI AGENG GETAS").addTo(map);
+      const mPink = L.marker([-7.080839813, 110.9173216], { icon: redIcon }).bindPopup("SEDEKAH BUMI PUNDEN SIGIT").addTo(map);
+      const mSage = L.marker([-7.080839813, 110.9173216], { icon: orangeIcon }).bindPopup("ASRAH BATIN").addTo(map);
+      const mBlack = L.marker([-7.0975727, 111.0004744], { icon: yellowIcon }).bindPopup("NGUNDUH BANYU UDAN").addTo(map);
+      const mPurple = L.marker([-7.081256, 110.9157681], { icon: orangeIcon }).bindPopup("PARADE SENI BUDAYA").addTo(map);
+      const mSky = L.marker([-7.080839813, 110.9173216], { icon: yellowIcon }).bindPopup("BANDE BECAK").addTo(map);
+    </script>
+  </body>
+</html>
